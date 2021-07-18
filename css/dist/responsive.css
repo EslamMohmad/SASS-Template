@@ -1,0 +1,91 @@
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+  .container .row {
+    margin: 0;
+  }
+
+  header {
+    overflow: hidden;
+  }
+  header .top {
+    padding: 0;
+  }
+  header .top .parent .number {
+    width: 100%;
+    padding: 10px 15px;
+  }
+  header .top .parent .number p {
+    margin: 0;
+  }
+  header .top .parent .number p:last-child {
+    float: right;
+  }
+  header .top .parent .social-icons {
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+  }
+  header .nav-bar {
+    padding: 0;
+  }
+  header .nav-bar .parent {
+    padding: 0 15px;
+  }
+  header .nav-bar .parent .list {
+    display: none;
+  }
+  header .nav-bar .parent .float-menu {
+    display: block;
+  }
+  header .slider .content {
+    margin: 0 15px;
+  }
+  header .hidden-nav-bar {
+    display: block;
+  }
+}
+@media (max-width: 419px) {
+  header .top .parent .number p {
+    display: block;
+    text-align: center;
+  }
+  header .top .parent .number p:last-child {
+    float: none;
+  }
+  header .top .parent .number p:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  header .slider button.more,
+header .slider a.tel {
+    display: block;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  header .slider button.more:not(:last-child),
+header .slider a.tel:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  header .slider .slick-list .slick-track .slide .container .row .content {
+    text-align: center;
+    padding: 35px;
+  }
+  header .slider .slick-list .slick-track .slide .container .row .content h1 {
+    font-size: 40px;
+  }
+  header .slider .slick-list .slick-track .slide .container .row .content p {
+    font-size: 18px;
+  }
+  header .slider .slick-list .slick-track .slide .container .row .content button.more {
+    margin-right: auto;
+  }
+
+  header .hidden-nav-bar {
+    width: 100%;
+    right: -100%;
+  }
+}
