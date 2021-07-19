@@ -1,18 +1,6 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-@import "color-root";
-
 /*start header*/
 header {
-    .main-color {
-        color: $main-color;
-    }
-    $main-transition: 0.3s ease-in-out color;
-
+$main-transition: 0.3s ease-in-out color;
     .top { //top
         background-color: $bg-gray-color;
         padding: 10px 0;
@@ -48,6 +36,8 @@ header {
 
     .nav-bar { //nav-bar
         padding: 10px 0;
+        background-color: white;
+        position: static;
         .parent {
             justify-content: space-between;
             align-items: center;
@@ -132,6 +122,12 @@ header {
             }
         }
     }
+    .nav-bar.active {
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        top:0;
+    }
 
     .slider { //slider
         overflow: hidden;
@@ -181,18 +177,7 @@ header {
                                     margin: 15px 0;
                                 }
                                 button.more {
-                                    background-color: $main-color;
-                                    color: white;
-                                    outline: none;
-                                    border:none;
-                                    padding: 7px 15px;
-                                    border-radius: 5px;
-                                    cursor: pointer;
                                     margin-right: 10px;
-                                    font-weight: bolder;
-                                    &:hover {
-                                        background-color: #e78428;
-                                    }
                                 }
                                 a.tel {
                                     color: $black-color;
@@ -260,7 +245,7 @@ header {
         position: fixed;
         right: -300px;
         background-color: white;
-        z-index: 1;
+        z-index: 2;
         display: none;
         overflow: hidden;
         padding: 30px;
@@ -293,3 +278,6 @@ header {
     }
 }
 /*end header*/
+
+//import responsive file
+@import "responsiveHeader";

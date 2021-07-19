@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    //global container
+    .container {
+        max-width: 100%;
+        padding: 0;
+        .row {
+            margin: 0;
+        }
+    }
+}
+
+@import "colorRoot";
+
+.main-color {
+    color: $main-color;
+}
+
+.bg-main-color {
+    background-color: $main-color;
+    color:white;
+    outline: none;
+    border:none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 14px;
+    text-transform: uppercase;
+    &:hover {
+        background-color: #e78428;
+    }
+}
+
+@import "header/header";
+
+@import "about/about";
+

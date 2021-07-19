@@ -28,6 +28,32 @@ $(".float-menu .fa-bars").on("click", function () {
   })
 })
 
+//when scroll 
+$(window).on("scroll", function () {
+  if ($(this).scrollTop() > $("header .top").innerHeight()) {
+    $("header .nav-bar").attr("class","nav-bar active")
+  } else {
+    $("header .nav-bar").removeClass("active")
+  }
+})
+
+function scrollTo(ele) {
+  $(ele).on("click", function () {
+    $(this).attr("class","active").siblings("li").removeAttr("class")
+    let sectionPosition = $("." + $(this).text()).offset().top;
+    $("html, body").animate({
+      scrollTop: sectionPosition
+    })
+    if ($(ele).parent().hasClass("slideRight")) {
+      $(this).parents(".hidden-nav-bar").animate({right:-$("header .hidden-nav-bar").innerWidth()})
+    }
+  })
+}
+
+scrollTo("header .hidden-nav-bar ul li")
+scrollTo("header .nav-bar ul li:not(:last-child)")
+
+
 $("header .hidden-nav-bar .fa-times").on("click", function () {
   $(this).parent().animate({
     right: 0

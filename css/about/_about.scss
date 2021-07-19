@@ -1,0 +1,45 @@
+.about {
+    padding: 100px 0;
+    text-transform: capitalize;
+    .txt {
+        padding-right: 40px;
+        width: 40%;
+        h1 {
+            font-weight: bold;
+            margin: 0;
+        }
+        p {
+            color: $gray-color;
+            font-size: 16px;
+            margin: 25px 0;
+        }
+    }
+    .list {
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        .bord {
+            width: (100% / 3) - 2;
+            padding:20px;
+            padding-top: 50px;
+            border:1px solid $light-border-color;
+            h3 {
+                font-size: 17px;
+                margin-bottom: 20px;
+            }
+            p {
+                font-size: 15px;
+                color: $gray-color;
+                margin: 0;
+            }
+            &:hover {
+                border-color:$main-color;
+                transition:0.3s ease-in-out border-color;
+            }
+        }
+    }
+    
+}
+
+//import responsive file
+@import "responsiveAbout";
