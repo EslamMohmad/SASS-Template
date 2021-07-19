@@ -303,15 +303,15 @@ header .slider .slick-list .slick-track .slide .container .row .content a.tel:ho
 }
 
 header .slider .slick-list .slick-track .one {
-  background-image: url(../../images/slide-1.jpg);
+  background-image: url(../images/slide-1.jpg);
 }
 
 header .slider .slick-list .slick-track .two {
-  background-image: url(../../images/slide-2.jpg);
+  background-image: url(../images/slide-2.jpg);
 }
 
 header .slider .slick-list .slick-track .three {
-  background-image: url(../../images/slide-3.jpg);
+  background-image: url(../images/slide-3.jpg);
 }
 
 header .slider .slick-list .slick-track .slide.slick-current .container .row .content {
