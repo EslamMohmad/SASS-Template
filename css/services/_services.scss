@@ -1,0 +1,29 @@
+.services {
+    .txt {
+        justify-content: space-between;
+        margin-bottom:50px;
+        h1 {
+            font-size: 45px;
+            width: 30%;
+            margin: 0;
+            line-height: 0.8em;
+        }
+        p {
+            width: 55%;
+            font-size: 16px;
+            margin: 0;
+        }
+    }
+    .row {
+        .grid {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3,auto);
+            grid-template-rows: repeat(2,auto);
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;
+            
+        }
+    }
+    
+}

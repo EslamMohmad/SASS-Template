@@ -46,6 +46,9 @@ $main-transition: 0.3s ease-in-out color;
                 font-size: 50px;
                 text-decoration: none;
                 position: relative;
+                &:hover {
+                    color:$main-color
+                }
                 span {
                     font-size: 30px;
                     font-weight: bold;

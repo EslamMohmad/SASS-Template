@@ -1,0 +1,37 @@
+[
+    [
+        ["../images/our-services/page1-img1.jpg"],
+        ["oil platforms"],
+        ["Efficient well drilling"]
+    ]
+    ,
+    [
+        ["../images/our-services/page1-img2.jpg"],
+        ["thermal power plants"],
+        ["Converting heat energy"]
+    ]
+    ,
+    [
+        ["../images/our-services/page1-img3.jpg"],
+        ["Oil Refineries"],
+        ["Transforming crude oil"]
+    ]
+    ,
+    [
+        ["../images/our-services/page1-img4.jpg"],
+        ["Gas Flares"],
+        ["Ensuring quality gas processing"]
+    ]
+    ,
+    [
+        ["../images/our-services/page1-img5.jpg"],
+        ["Oil Pumps"],
+        ["Sustainable oil extraction"]
+    ]
+    ,
+    [
+        ["../images/our-services/page1-img6.jpg"],
+        ["Solar Power Plants"],
+        ["Green energy solutions"]
+    ]
+]

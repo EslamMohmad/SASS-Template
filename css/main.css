@@ -99,6 +99,10 @@ header .nav-bar .parent .logo a {
   position: relative;
 }
 
+header .nav-bar .parent .logo a:hover {
+  color: #ff922d;
+}
+
 header .nav-bar .parent .logo a span {
   font-size: 30px;
   font-weight: bold;
@@ -577,5 +581,37 @@ header .hidden-nav-bar .fa-times {
   .about .row .txt h1 br {
     display: none;
   }
+}
+
+.services .txt {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.services .txt h1 {
+  font-size: 45px;
+  width: 30%;
+  margin: 0;
+  line-height: 0.8em;
+}
+
+.services .txt p {
+  width: 55%;
+  font-size: 16px;
+  margin: 0;
+}
+
+.services .row .grid {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[3];
+      grid-template-columns: repeat(3, auto);
+  -ms-grid-rows: (auto)[2];
+      grid-template-rows: repeat(2, auto);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
 }
 /*# sourceMappingURL=main.css.map */

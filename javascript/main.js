@@ -37,6 +37,7 @@ $(window).on("scroll", function () {
   }
 })
 
+//nav-bar section
 function scrollTo(ele) {
   $(ele).on("click", function () {
     $(this).attr("class","active").siblings("li").removeAttr("class")
@@ -49,16 +50,27 @@ function scrollTo(ele) {
     }
   })
 }
-
 scrollTo("header .hidden-nav-bar ul li")
 scrollTo("header .nav-bar ul li:not(:last-child)")
 
-
+//close nav-bar
 $("header .hidden-nav-bar .fa-times").on("click", function () {
   $(this).parent().animate({
     right: 0
   })
 })
+
+//create content for our services section
+const targetParent = $(".services .grid");
+let res = "";
+for (let i = 0; i < 6; i++) {
+  res += `<div class='bord'>
+            <img>
+            <h3></h3>
+            <span></span>
+          </div>`
+  targetParent.html(res)
+}
 
 $(window).on("click", function () {
   $(".search-bar").fadeOut()
@@ -67,6 +79,8 @@ $(window).on("click", function () {
     right: -$("header .hidden-nav-bar").innerWidth()
   })
 })
+
+
 
 //stop propagation
 function stopPropa(ele) {
@@ -86,3 +100,15 @@ $("header .slider").slick({
   arrows:false,
   autoplay:true
 })
+
+const myData = new XMLHttpRequest();
+myData.onload = function () {
+  if (this.readyState == 4 && this.status == 200) {
+    let dat = JSON.parse(this.responseText)
+    console.log(dat)
+  } else {
+    console.log("no")
+  }
+}
+  myData.open("get","myData.json",true)
+  myData.send()
