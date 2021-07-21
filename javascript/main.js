@@ -62,7 +62,19 @@ $(window).on("click", function () {
 
 //coloring nav-bar items when scroll
 $(window).on("scroll", function () {
-  let scrollValue = $(this).scrollTop();
+  let element = $(".nav-bar .list li:not(:last-child)");
+  $(".parent-section").each(function () {
+    if ($(window).scrollTop() > $(this).offset().top - 200) {
+      let eleId = $(this).attr("id");
+      function navList(target) {
+        $(target + " .list li[data-scroll='" + eleId +"']:not(:last-child)")
+        .attr("class","active")
+      .siblings().removeAttr("class")
+      }
+      navList(".nav-bar")
+      navList(".hidden-nav-bar")
+    }
+  })
 })
 
 //stop propagation

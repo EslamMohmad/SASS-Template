@@ -14,12 +14,12 @@
     <div class="hidden-nav-bar">
         <div class="list">
             <ul class="slideRight">
-                <li class="active">home</li>
-                <li>about</li>
-                <li>services</li>
-                <li>team</li>
-                <li>news</li>
-                <li>contacts</li>
+                <li class="active" data-scroll="home">home</li>
+                <li data-scroll="about">about</li>
+                <li data-scroll="services">services</li>
+                <li data-scroll="team">team</li>
+                <li data-scroll="news">news</li>
+                <li data-scroll="contacts">contacts</li>
             </ul>
         </div>
         <i class="fas fa-times hidden"></i>
@@ -28,7 +28,7 @@
     <!--start header-->
 
     <!--start top section-->
-    <div class="top home">
+    <div class="top home parent-section" id="home">
         <div class="container">
             <div class="row parent">
                 <div class="number">
@@ -56,19 +56,19 @@
                 </div>
                 <div class="list">
                     <ul>
-                        <li class="active">home</li>
-                        <li>about</li>
-                        <li>services</li>
-                        <li>team</li>
-                        <li>news</li>
-                        <li>contacts</li>
+                        <li class="active" data-scroll="home">home</li>
+                        <li data-scroll="about">about</li>
+                        <li data-scroll="services">services</li>
+                        <li data-scroll="team">team</li>
+                        <li data-scroll="news">news</li>
+                        <li data-scroll="contacts">contacts</li>
                         <li><i class="fas fa-search click"></i></li>
                     </ul>
                     <div class="search-bar">
                         <input type="search" placeholder="search...">
                         <i class="fas fa-search"></i>
                         <i class="fas fa-times"></i>
-                    </div>
+                    </div>  
                 </div>
                 <div class="float-menu">
                     <i class="fas fa-bars"></i>
@@ -133,7 +133,7 @@
     <!--end header-->
 
     <!--start about us-->
-    <div class="about">
+    <div class="about parent-section" id="about">
         <div class="container">
             <div class="row">
                 <div class="txt">
@@ -161,8 +161,9 @@
         </div>
     </div>
     <!--end about us-->
+    
     <!--start services-->
-    <div class="services">
+    <div class="services parent-section" id="services">
         <div class="container">
             <div class="row txt">
                 <h1>our <span class="main-color">services</span></h1>
