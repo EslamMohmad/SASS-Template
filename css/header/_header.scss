@@ -1,5 +1,4 @@
 /*start header*/
-header {
 $main-transition: 0.3s ease-in-out color;
     .top { //top
         background-color: $bg-gray-color;
@@ -37,7 +36,9 @@ $main-transition: 0.3s ease-in-out color;
     .nav-bar { //nav-bar
         padding: 10px 0;
         background-color: white;
-        position: static;
+        position: sticky;
+        top:0;
+        z-index: 1;
         .parent {
             justify-content: space-between;
             align-items: center;
@@ -124,12 +125,6 @@ $main-transition: 0.3s ease-in-out color;
                 }
             }
         }
-    }
-    .nav-bar.active {
-        position: fixed;
-        z-index: 1;
-        width: 100%;
-        top:0;
     }
 
     .slider { //slider
@@ -279,7 +274,6 @@ $main-transition: 0.3s ease-in-out color;
             cursor: pointer;
         }
     }
-}
 /*end header*/
 
 //import responsive file

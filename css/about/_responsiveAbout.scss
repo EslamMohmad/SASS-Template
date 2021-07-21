@@ -1,6 +1,7 @@
 @media (max-width:1025px) {
     .about {
-        padding: 50px 0;
+        .row {
+            padding: 50px 0;
         .txt {
             margin: 6.125% 0;
         }
@@ -13,6 +14,7 @@
                     margin-bottom: 20px
                 }
             }
+        }
         }
     }
 }

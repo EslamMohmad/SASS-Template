@@ -1,11 +1,11 @@
 //count the slider height
 function sliderHeight() {
-    const headerTop = $("header .top").innerHeight(),
-      headerNavBar = $("header .nav-bar").innerHeight(),
+    const headerTop = $(".top").innerHeight(),
+      headerNavBar = $(".nav-bar").innerHeight(),
       winHeight = $(window).innerHeight();
     const result = winHeight - (headerNavBar + headerTop);
 
-    $("header .slider").css("height",result)
+    $(".slider").css("height", result)
 }
 sliderHeight()
 $(window).resize(function () {
@@ -13,28 +13,19 @@ $(window).resize(function () {
 })
 
 //click on search icon 
-$(".fa-search.click").on("click", function () {
-  $(".search-bar").fadeIn().css("display","flex")
+$(".nav-bar .fa-search.click").on("click", function () {
+  $(".nav-bar .search-bar").fadeIn().css("display","flex")
 })
 //close search-bar
-$(".fa-times").on("click", function () {
+$(".nav-bar .fa-times").on("click", function () {
   $(".search-bar").fadeOut()
 })
 
 //click on menu icon
-$(".float-menu .fa-bars").on("click", function () {
-  $("header .hidden-nav-bar").animate({
+$(".nav-bar .float-menu .fa-bars").on("click", function () {
+  $(".hidden-nav-bar").animate({
     right: 0
   })
-})
-
-//when scroll 
-$(window).on("scroll", function () {
-  if ($(this).scrollTop() > $("header .top").innerHeight()) {
-    $("header .nav-bar").attr("class","nav-bar active")
-  } else {
-    $("header .nav-bar").removeClass("active")
-  }
 })
 
 //nav-bar section
@@ -43,32 +34,36 @@ function scrollTo(ele) {
     $(this).attr("class","active").siblings("li").removeAttr("class")
     let sectionPosition = $("." + $(this).text()).offset().top;
     $("html, body").animate({
-      scrollTop: sectionPosition
+      scrollTop: sectionPosition - $(".nav-bar").innerHeight()
     })
     if ($(ele).parent().hasClass("slideRight")) {
-      $(this).parents(".hidden-nav-bar").animate({right:-$("header .hidden-nav-bar").innerWidth()})
+      $(this).parents(".hidden-nav-bar").animate({right:-$(".hidden-nav-bar").innerWidth()})
     }
-  })
+  })  
 }
-scrollTo("header .hidden-nav-bar ul li")
-scrollTo("header .nav-bar ul li:not(:last-child)")
+scrollTo(".hidden-nav-bar ul li")
+scrollTo(".nav-bar ul li:not(:last-child)")
 
 //close nav-bar
-$("header .hidden-nav-bar .fa-times").on("click", function () {
+$(".hidden-nav-bar .fa-times").on("click", function () {
   $(this).parent().animate({
-    right: 0
+    right: -$(this).parent().innerWidth()
   })
 })
 
+//when click on screen
 $(window).on("click", function () {
   $(".search-bar").fadeOut()
 
-  $("header .hidden-nav-bar").animate({
-    right: -$("header .hidden-nav-bar").innerWidth()
+  $(".hidden-nav-bar").animate({
+    right: -$(".hidden-nav-bar").innerWidth()
   })
 })
 
-
+//coloring nav-bar items when scroll
+$(window).on("scroll", function () {
+  let scrollValue = $(this).scrollTop();
+})
 
 //stop propagation
 function stopPropa(ele) {
@@ -77,10 +72,10 @@ function stopPropa(ele) {
   })
 }
 stopPropa(".nav-bar .list")
-stopPropa(".float-menu .fa-bars, header .hidden-nav-bar .list")
+stopPropa(".nav-bar .float-menu .fa-bars, .hidden-nav-bar .list")
 
 //slick slider
-$("header .slider").slick({
+$(".slider").slick({
   dots: true,
   infinite: true,
   speed: 700,
@@ -88,3 +83,24 @@ $("header .slider").slick({
   arrows:false,
   autoplay:true
 })
+
+//get data from json file
+const myData = new XMLHttpRequest();
+myData.onreadystatechange = function () {
+  if (this.readyState == 4 && this.status == 200) {
+    const obj = JSON.parse(this.response);
+    let htmlContnet = "";
+    const comment = "<!--content created by {js, ajax, json}-->";
+    for (let i = 0; i < obj.length; i++) {
+      htmlContnet += 
+      `<div class="bord">
+        <img src="${obj[i].src}">
+        <h3>${obj[i].h3}</h3>
+        <p>${obj[i].p}</p>
+      </div>`
+      $(".services .grid").html(comment + htmlContnet)
+    }
+  }
+}
+myData.open("GET","javascript/myData.json")
+myData.send()

@@ -1,16 +1,5 @@
-@media (max-width: 1200px) {
-    
-
-}
-
-@media (max-width: 992px) {
-
-}
-
 @media (max-width: 768px) {
     //header top
-    header {
-        overflow: hidden;
         .top {
             padding: 0;
             .parent { 
@@ -56,11 +45,10 @@
         .hidden-nav-bar {
             display: block;
         }
-    }
 }
 
 @media (max-width: 419px) {
-    header .top .parent .number p{
+    .top .parent .number p{
         display: block;
         text-align: center;
         &:last-child {
@@ -71,7 +59,7 @@
         }
     }
 
-    header .slider {
+    .slider {
         button.more,
         a.tel {
             display: block;
@@ -97,7 +85,7 @@
         }
     }
 
-    header .hidden-nav-bar {
+    .hidden-nav-bar {
         width: 100%;
         right: -100%;
     }
