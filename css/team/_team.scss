@@ -1,0 +1,114 @@
+.team {
+    position: relative;
+    height: 800px;
+    background-image: url(../images/our-team/parallax2.jpg);
+    background-size:cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    .over-lay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(40, 50, 67, 0.6);
+    }
+    .content {
+        position: relative;
+        z-index: 2;
+        top:50%;
+        transform: translateY(-50%);
+        .row {
+            position: relative;
+            h1 {
+                color: white;
+                margin-bottom: 40px;
+            }
+            .slider-two {
+                overflow: hidden;
+                height: 550px;
+                width: 100%;
+                .slick-list{
+                    height: 100%;
+                    .slick-track  {
+                        height: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        .bord {
+                            overflow: hidden;
+                            position: relative;
+                            height: 100%;
+                            background-size: cover;
+                            background-position: center;
+                            &:not(:last-child) {
+                                margin-right: 20px;
+                            }
+                            &:active {
+                                cursor:grab;
+                            }
+                            .bg {
+                                width: 100%;
+                                height: 100%;
+                                position: absolute;
+                                background-color: rgba(0, 0, 0, 0.8);
+                                transition: 0.2s ease-in-out background-color;
+                            }
+                            .txt {
+                                position: absolute;
+                                bottom: -100px;
+                                background-color: rgba(0, 0, 0,0.8);
+                                color: white;
+                                width: 100%;
+                                padding: 10px;
+                                transition: 0.5s ease-in-out bottom;
+                                p {
+                                    margin-bottom: 5px;
+                                }
+                            }
+                        }
+                        .slick-center {
+                            .bg{
+                                background-color: rgba(0, 0, 0, 0);
+                            }
+                            .txt {
+                                bottom: 0;
+                            }
+                        }
+                        .one {
+                            background-image: url(../images/our-team/team-1-1.jpg);
+                        }
+                        .two {
+                            background-image: url(../images/our-team/team-2-1.jpg);
+                        }
+                        .three {
+                            background-image: url(../images/our-team/team-3-1.jpg);
+                        }
+                        .four {
+                            background-image: url(../images/our-team/team-4-1.jpg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .slick-arrow {
+        background-color: white;
+        color:black;
+        font-size: 20px;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        text-align:center;
+        line-height: 50px;
+        cursor: pointer;
+        position: absolute;
+        top:50%;
+        z-index: 3;
+        &:first-child {
+            left: 10px;
+        }
+        &:last-child {
+            right:10px;
+        }
+    }
+}
+
+@import "teamResponsive";

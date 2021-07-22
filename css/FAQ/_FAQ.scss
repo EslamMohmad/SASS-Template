@@ -1,0 +1,55 @@
+.FAQ {
+    padding: 25px 0;
+    .content {
+        width: (100% / 2);
+    }
+    .txt {
+        margin: 6.125% auto;
+        padding-right: 20px;
+        h1 {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+        p {
+            font-size: 14px;
+            color: $gray-color;
+            margin: 0;
+        }
+        .slide-down {
+            margin-top: 50px;
+            .bord {
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+                .head {
+                    cursor: pointer;
+                    h5 {
+                        font-size: 16px;
+                        max-width: 90%;
+                        display: inline-block;
+                        margin-bottom: 20px;
+                    }
+                    i {
+                        float: right;
+                    }
+                }
+                .slide-txt {
+                    display: none;
+                    color:$gray-color;
+                    font-size: 14px;
+                }
+
+            }
+        }
+    }
+    .img {
+        background-image: url(../images/FAG/slide-4.jpg);
+        background-size: cover;
+        background-position: right;
+        height: 600px;
+    }
+}
+
+//import responsive file
+@import "faqResponsive";

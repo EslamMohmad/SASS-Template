@@ -5,7 +5,7 @@ function sliderHeight() {
       winHeight = $(window).innerHeight();
     const result = winHeight - (headerNavBar + headerTop);
 
-    $(".slider").css("height", result)
+    $(".slider-one").css("height", result)
 }
 sliderHeight()
 $(window).resize(function () {
@@ -86,8 +86,8 @@ function stopPropa(ele) {
 stopPropa(".nav-bar .list")
 stopPropa(".nav-bar .float-menu .fa-bars, .hidden-nav-bar .list")
 
-//slick slider
-$(".slider").slick({
+//slick-one slider
+$(".slider-one").slick({
   dots: true,
   infinite: true,
   speed: 700,
@@ -96,6 +96,35 @@ $(".slider").slick({
   autoplay:true
 })
 
+$(".slider-two").slick({
+  slidesToShow: 3,
+  arrows:true,
+  appendArrows:$(".team"),
+  nextArrow:"<i class='fas fa-angle-right'></i>",
+  prevArrow:"<i class='fas fa-angle-left'></i>",
+  autoplay:true,
+  centerMode: true,
+  centerPadding: '0px',
+  focusOnSelect:true,
+  responsive: [
+    {
+      breakpoint:992,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint:660,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+})
+$(".slider-two .slick-active").eq("1").attr("data-hover","hover")
+.siblings().removeAttr("data-hover")
 //get data from json file
 const myData = new XMLHttpRequest();
 myData.onreadystatechange = function () {
@@ -116,3 +145,11 @@ myData.onreadystatechange = function () {
 }
 myData.open("GET","javascript/myData.json")
 myData.send()
+
+//slide up/down FAQ section
+$(".FAQ .slide-down .bord").on("click", function () {
+    $(this).find(".fas").toggleClass("fa-plus fa-minus")
+    .parents(".bord").siblings().find(".fas").attr("class","fas fa-plus")
+    $(this).find(".slide-txt").slideToggle()
+    .parents(".bord").siblings().find(".slide-txt").slideUp()
+})
