@@ -83,7 +83,7 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 3;
+  z-index: 4;
 }
 
 .nav-bar .parent {
@@ -353,7 +353,7 @@
   position: fixed;
   right: -300px;
   background-color: white;
-  z-index: 2;
+  z-index: 5;
   display: none;
   overflow: hidden;
   padding: 30px;
@@ -869,7 +869,6 @@
 
 .team {
   position: relative;
-  height: 800px;
   background-image: url(../images/our-team/parallax2.jpg);
   background-size: cover;
   background-position: bottom;
@@ -886,9 +885,7 @@
 .team .content {
   position: relative;
   z-index: 2;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  padding: 50px 25px;
 }
 
 .team .content .row {
@@ -915,9 +912,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .team .content .row .slider-two .slick-list .slick-track .bord {
@@ -925,7 +919,7 @@
   position: relative;
   height: 100%;
   background-size: cover;
-  background-position: center;
+  background-position: top center;
 }
 
 .team .content .row .slider-two .slick-list .slick-track .bord:not(:last-child) {
@@ -1015,14 +1009,17 @@
 }
 
 @media (max-width: 768px) {
-  .team .content {
-    padding: 0 20px;
+  .team .content .row h1 {
+    font-size: 35px;
   }
 }
 
 @media (max-width: 660px) {
   .team .content .row .slider-two {
-    height: 650px;
+    height: 70vh;
+  }
+  .team .content .row .slider-two .slick-list .slick-track .bord:not(:last-child) {
+    margin: 0;
   }
 }
 
@@ -1033,17 +1030,148 @@
   .team .content .row .slider-two .slick-list .slick-track .bord:not(:last-child) {
     margin: 0;
   }
-  .team .slick-arrow {
-    top: auto;
-    bottom: 20px;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+}
+
+.testimonials {
+  padding: 50px 25px;
+}
+
+.testimonials .row {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.testimonials .row h1 {
+  margin-bottom: 40px;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+
+.testimonials .row .slider-three {
+  width: 100%;
+  min-height: auto;
+}
+
+.testimonials .row .slider-three .slick-list {
+  height: 100%;
+  overflow: hidden;
+}
+
+.testimonials .row .slider-three .slick-list .slick-track {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.testimonials .row .slider-three .slick-list .slick-track .bord {
+  width: 300px;
+  padding: 25px;
+  border: 1px solid #dde0e6;
+  border-radius: 5px;
+  margin-right: 20px;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.testimonials .row .slider-three .slick-list .slick-track .bord .img {
+  margin-bottom: 15px;
+}
+
+.testimonials .row .slider-three .slick-list .slick-track .bord .img img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 20px;
+}
+
+.testimonials .row .slider-three .slick-list .slick-track .bord .img .one {
+  background-image: url(../images/testimonials/testimonials-1.jpg);
+}
+
+.testimonials .row .slider-three .slick-list .slick-track .bord .img .two {
+  background-image: url(../images/testimonials/testimonials-2.jpg);
+}
+
+.testimonials .row .slider-three .slick-list .slick-track .bord .img .three {
+  background-image: url(../images/testimonials/testimonials-3.jpg);
+}
+
+.testimonials .row .slider-three .slick-list .slick-track .bord .img .four {
+  background-image: url(../images/testimonials/testimonials-4.jpg);
+}
+
+.testimonials .row .slider-three .slick-list .slick-track .bord .img .five {
+  background-image: url(../images/testimonials/testimonials-5.jpg);
+}
+
+.testimonials .row .slider-three .slick-list .slick-track .bord .img .six {
+  background-image: url(../images/testimonials/testimonials-6.jpg);
+}
+
+.testimonials .row .slider-three .slick-list .slick-track .bord p {
+  margin: 0;
+  font-size: 14px;
+  color: #818181;
+}
+
+.testimonials .row .slider-three .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px 0;
+}
+
+.testimonials .row .slider-three .slick-dots li {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: darkgray;
+  cursor: pointer;
+  margin: 0 2.5px;
+}
+
+.testimonials .row .slider-three .slick-dots li button {
+  display: none;
+}
+
+.testimonials .row .slider-three .slick-dots .slick-active {
+  background-color: #ff922d;
+}
+
+@media (max-width: 768px) {
+  .testimonials .row h1 {
+    font-size: 25px;
   }
-  .team .slick-arrow:first-child {
-    left: 25%;
+}
+
+@media (max-width: 340px) {
+  .testimonials .row .slider-three .slick-list .slick-track .bord {
+    padding: 0;
+    margin: 0;
   }
-  .team .slick-arrow:last-child {
-    right: 25%;
+  .testimonials .row .slider-three .slick-list .slick-track .bord .img {
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+  }
+  .testimonials .row .slider-three .slick-list .slick-track .bord .img img {
+    margin: 0 0 10px 0;
+  }
+  .testimonials .row .slider-three .slick-list .slick-track .bord .img span {
+    display: block;
+  }
+  .testimonials .row .slider-three .slick-list .slick-track .bord p {
+    padding: 0 15px 15px 15px;
   }
 }
 /*# sourceMappingURL=main.css.map */

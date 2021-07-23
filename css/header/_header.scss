@@ -38,7 +38,7 @@ $main-transition: 0.3s ease-in-out color;
     background-color: white;
     position: sticky;
     top:0;
-    z-index: 3;
+    z-index: 4;
     .parent {
         justify-content: space-between;
         align-items: center;
@@ -244,7 +244,7 @@ $main-transition: 0.3s ease-in-out color;
     position: fixed;
     right: -300px;
     background-color: white;
-    z-index: 2;
+    z-index: 5;
     display: none;
     overflow: hidden;
     padding: 30px;

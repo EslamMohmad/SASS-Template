@@ -86,7 +86,7 @@ function stopPropa(ele) {
 stopPropa(".nav-bar .list")
 stopPropa(".nav-bar .float-menu .fa-bars, .hidden-nav-bar .list")
 
-//slick-one slider
+//slick slider
 $(".slider-one").slick({
   dots: true,
   infinite: true,
@@ -98,10 +98,7 @@ $(".slider-one").slick({
 
 $(".slider-two").slick({
   slidesToShow: 3,
-  arrows:true,
-  appendArrows:$(".team"),
-  nextArrow:"<i class='fas fa-angle-right'></i>",
-  prevArrow:"<i class='fas fa-angle-left'></i>",
+  arrows:false,
   autoplay:true,
   centerMode: true,
   centerPadding: '0px',
@@ -123,13 +120,37 @@ $(".slider-two").slick({
     }
   ]
 })
-$(".slider-two .slick-active").eq("1").attr("data-hover","hover")
-.siblings().removeAttr("data-hover")
+
+$(".slider-three").slick({
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  arrows:false,
+  autoplay:false,
+  dots: true,
+  responsive: [
+    {
+      breakpoint:992,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint:768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+  ]
+})
+
 //get data from json file
 const myData = new XMLHttpRequest();
 myData.onreadystatechange = function () {
   if (this.readyState == 4 && this.status == 200) {
     const obj = JSON.parse(this.response);
+    console.log(this.response)
     let htmlContnet = "";
     const comment = "<!--content created by {js, ajax, json}-->";
     for (let i = 0; i < obj.length; i++) {
