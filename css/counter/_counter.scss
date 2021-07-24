@@ -1,0 +1,40 @@
+.counter {
+    position: relative;
+    height: 200px;
+    background-image:url(../images/counter/parallax3.jpg) ;
+    background-position:top right;
+    background-attachment: fixed;
+    .container {
+        height: 100%;
+        .row {
+            height: 100%;
+        }
+    }
+    .content {
+        justify-content: space-around;
+        flex-wrap: nowrap   ;
+        align-items: center;
+        color: white;
+        position: relative;
+        z-index: 2;
+        .bord {
+            padding: 0 20px;
+            h1 {
+                display: inline-block;
+                margin:0 10px 0 0;
+            }
+            .break {
+                word-break: keep-all;
+                max-width: 70px;
+                height: auto;
+                display: inline-block;
+                line-height: 1.2em;
+                text-transform: uppercase;
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+//import responsive file
+@import "counterRes";

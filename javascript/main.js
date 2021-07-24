@@ -150,7 +150,6 @@ const myData = new XMLHttpRequest();
 myData.onreadystatechange = function () {
   if (this.readyState == 4 && this.status == 200) {
     const obj = JSON.parse(this.response);
-    console.log(this.response)
     let htmlContnet = "";
     const comment = "<!--content created by {js, ajax, json}-->";
     for (let i = 0; i < obj.length; i++) {
@@ -174,3 +173,26 @@ $(".FAQ .slide-down .bord").on("click", function () {
     $(this).find(".slide-txt").slideToggle()
     .parents(".bord").siblings().find(".slide-txt").slideUp()
 })
+
+//counter function
+function countFun(targetEle,index,endPoint,speed) {
+  const parent = $(targetEle).parents(".counter");
+  $(window).on("scroll", function () {
+    if ($(window).scrollTop() >= parent.offset().top - ($(window).innerHeight() - 150)) {
+      const num = $(targetEle).eq(index);
+      const startPoint = Number(num.text());
+      let i = startPoint;
+      const time = setInterval(_=> {
+        if (i < endPoint) {
+          num.text(i)
+          i++
+        } else {
+          clearInterval(time)
+        }
+      },speed)
+    }
+  })
+}
+countFun(".counter .number",0,16910,10)
+countFun(".counter .number",1,18450,10)
+countFun(".counter .number",2,64910,10)

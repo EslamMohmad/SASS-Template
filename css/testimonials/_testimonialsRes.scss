@@ -4,6 +4,12 @@
     }
 }
 
+@media (max-width:660px) {
+    .testimonials .row .slider-three .slick-list .slick-track .bord {
+        margin: 0;
+    }
+}
+
 
 @media (max-width:340px) {
     .testimonials .row .slider-three .slick-list .slick-track .bord {

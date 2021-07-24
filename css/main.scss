@@ -20,6 +20,17 @@
 .main-color {
     color: $main-color;
 }
+$main-transition: 0.3s ease-in-out color;
+
+.over-lay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
 
 .bg-main-color {
     background-color: $main-color;
@@ -47,4 +58,6 @@
 
 @import "team/team";
 
-@import "testimonials/testimonials"
+@import "testimonials/testimonials";
+
+@import "counter/counter";
