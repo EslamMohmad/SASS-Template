@@ -1249,4 +1249,114 @@
     padding: 40px 0;
   }
 }
+
+.news {
+  padding: 50px 20px;
+}
+
+.news .txt {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.news .txt h1 {
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.news .txt button {
+  padding: 10px 15px;
+  border: 1px solid #acb0bb;
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.news .txt button:hover {
+  color: #ff922d;
+  border-color: #ff922d;
+}
+
+.news .content {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.news .content .bord {
+  width: 31.33333%;
+  padding: 40px;
+  cursor: pointer;
+  border: 1px solid #dde0e6;
+  border-radius: 5px;
+  -webkit-transition: 0.5s ease-in-out background-color;
+  transition: 0.5s ease-in-out background-color;
+}
+
+.news .content .bord:hover {
+  background-color: #ff922d;
+  border-color: white;
+}
+
+.news .content .bord h6 {
+  margin-bottom: 30px;
+  text-transform: capitalize;
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+.news .content .bord h6 i {
+  margin-right: 10px;
+}
+
+.news .content .bord p {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.news .content .bord span {
+  color: #818181;
+  -webkit-transition: 0.5s ease-in-out color;
+  transition: 0.5s ease-in-out color;
+}
+
+.news .content .bord:hover span {
+  color: #0c1325;
+}
+
+@media (max-width: 992px) {
+  .news .txt h1 {
+    font-size: 25px;
+  }
+  .news .content .bord {
+    padding: 30px 20px;
+  }
+  .news .content .bord p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #0c1325;
+  }
+  .news .content .bord span {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .news .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .news .content .bord {
+    width: 100%;
+  }
+  .news .content .bord:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
 /*# sourceMappingURL=main.css.map */

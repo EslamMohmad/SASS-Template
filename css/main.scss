@@ -28,7 +28,7 @@ $main-transition: 0.3s ease-in-out color;
     position: absolute;
     top:0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: $over-lay-color;
     z-index: 1;
 }
 
@@ -61,3 +61,5 @@ $main-transition: 0.3s ease-in-out color;
 @import "testimonials/testimonials";
 
 @import "counter/counter";
+
+@import "news/news";

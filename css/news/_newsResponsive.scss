@@ -1,0 +1,35 @@
+@media (max-width:992px) {
+    .news {
+        .txt {
+            h1 {
+                font-size: 25px;
+            }
+            
+        }
+        .content .bord  {
+            padding:30px 20px;
+            p {
+                font-size: 15px;
+                font-weight: 400;
+                color: $black-color;
+            }
+            span {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .news {
+        .content {
+            flex-direction: column;
+            .bord {
+                width: 100%;
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
