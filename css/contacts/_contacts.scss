@@ -1,0 +1,159 @@
+.contacts {
+    background-color:$footer--bg-color;
+    color: white;
+    padding: 0 25px;
+    min-height: 80vh;
+    .row {
+        justify-content: space-between;
+    }
+    .head {
+        padding: 50px 0;
+        border-bottom: 1px solid $dark-border-color;
+        .bord {
+            width: (100% / 4) - 2;
+        }
+        .logo {
+            a {
+                font-weight: bolder;
+                font-size: 50px;
+                text-decoration: none;
+                position: relative;
+                &:hover {
+                    color:$main-color
+                }
+                span {
+                    font-size: 30px;
+                    font-weight: bold;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 30px;
+                    &::after {
+                        content: ")";
+                        position: absolute;
+                        transform: rotateZ(90deg);
+                        bottom: -20px;
+                        right: 9px;
+                    }
+                }
+            }
+        }
+        .icon {
+            padding: 15px 0;
+            i {
+                font-size: 37px;
+                color: $main-color;
+            }
+            .txt {
+                display: inline-block;
+                margin-left: 15px;
+                h6 {
+                    color:$footer-gray-color;
+                    font-weight:lighter;
+                    font-size: 17px;
+                    margin-bottom: 2px;
+                }
+                p {
+                    margin-bottom: 0;
+                    a{
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+    .foot {
+        padding: 50px 0 20px 0;
+        text-transform: capitalize;
+        .bord {
+            width: (100% / 4) - 4;
+            h6 {
+                font-size: 17px;
+                margin-bottom: 20px;
+            }
+        } 
+        .about {
+            p {
+                color: $footer-gray-color;
+                font-size:15px;
+            }
+        }
+        .links {
+            padding: 0 50px;
+            ul li {
+                color: $footer-gray-color;
+                list-style: none;
+                font-size: 15px;
+                cursor: pointer;
+                &:not(:last-child) {
+                    margin-bottom: 8px;
+                    transition:$main-transition
+                }
+                &:hover {
+                    color: $main-color;
+                }
+            }
+        }
+        .latest-news {
+            h4 {
+                font-size: 16px;
+                margin-bottom: 6px;
+                transition:$main-transition;
+                cursor: pointer;
+                &:hover {
+                    color:$main-color;
+                }
+            }
+            p {
+                color: $footer-gray-color;
+                transition:$main-transition;
+                cursor: pointer;
+                &:hover {
+                    color:$main-color;
+                }
+            }
+        }
+        .subscribe {
+            .input {
+                position: relative;
+                margin-bottom: 15px;
+                input {
+                    width: 100%;
+                    background-color: transparent;
+                    padding:7px 10px;
+                    border:1px solid white;
+                    border-radius: 8px;
+                    outline: none;
+                    color: $footer-gray-color;
+                    &:focus {
+                        border-color: $main-color;
+                    }
+                }
+                i {
+                    position: absolute;
+                    right: 10px;
+                    top:50%;
+                    transform: translateY(-50%);
+                    transition:$main-transition;
+                    cursor: pointer;
+                    &:hover {
+                        color:$main-color;
+                    }
+                }
+            }
+            p {
+                font-size: 15px;
+                color: $footer-gray-color;
+            }
+        }
+    }
+    h5 {
+        font-size: 15px ;
+        color: $footer-gray-color;
+        margin: 0;
+        padding: 10px 0;
+    }
+}
+
+//import resposive file
+@import "contactsRes"
