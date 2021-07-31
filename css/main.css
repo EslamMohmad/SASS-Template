@@ -1362,7 +1362,7 @@
   background-color: #2f3a55;
   color: white;
   padding: 0 25px;
-  min-height: 80vh;
+  height: 750px;
 }
 
 .contacts .row {
@@ -1567,6 +1567,9 @@
 }
 
 @media (max-width: 768px) {
+  .contacts {
+    height: auto;
+  }
   .contacts .head .icon {
     width: 48%;
   }

@@ -35,7 +35,7 @@ function scrollTo(ele) {
     let sectionPosition = $("." + $(this).text()).offset().top;
     $("html, body").animate({
       scrollTop: sectionPosition - $(".nav-bar").innerHeight()
-    })
+    },1500)
     if ($(ele).parent().hasClass("slideRight")) {
       $(this).parents(".hidden-nav-bar").animate({right:-$(".hidden-nav-bar").innerWidth()})
     }
@@ -62,12 +62,11 @@ $(window).on("click", function () {
 
 //coloring nav-bar items when scroll
 $(window).on("scroll", function () {
-  let element = $(".nav-bar .list li:not(:last-child)");
   $(".parent-section").each(function () {
     if ($(window).scrollTop() > $(this).offset().top - 200) {
       let eleId = $(this).attr("id");
       function navList(target) {
-        $(target + " .list li[data-scroll='" + eleId +"']:not(:last-child)")
+        $(target + " .list li[data-scroll='" + eleId +"']")
         .attr("class","active")
       .siblings().removeAttr("class")
       }
